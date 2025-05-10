@@ -14,7 +14,7 @@ Promise.myAll = (promises) => {
           }
         })
         .catch((e) => {
-          reject(new Error());
+          reject(e);
         });
     });
   });
@@ -43,4 +43,4 @@ Promise.myAll([promise4, promise5])
   .then((values) => {
     console.log(values);
   })
-  .catch((e) => console.log("error"));
+  .catch((e) => console.log("error: ", e));
